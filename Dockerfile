@@ -70,6 +70,7 @@ RUN set -ex \
         /usr/share/doc \
         /usr/share/doc-base
 
+RUN adduser airflow root
 COPY script/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
